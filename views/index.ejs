@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+  <meta charset = "utf-8">
+    <title>Kairos</title>
+    <link rel="stylesheet" type="text/css" href="/styleshow.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+    <p>What's your name?</p>
+    <form id = "name" action="/create" method="POST">
+      <input type="text" name="name">
+    </form>
+  <img id = "img">
+  <script>
+      $(".name").keypress(function(event) {
+          if (event.which == 13) {
+          event.preventDefault();
+            $("name").submit();
+          }
+      });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+body{
+  font-family: 'Arimo', Arial, serif; font-weight: 700;
+}
+
+img{
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -2;
+}
+
+#dot-matrix {
+  margin-left: -5px;
+  background: url(http://s14.directupload.net/images/111129/44ga9qid.png);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+h3{
+  margin-top: 260px;
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  letter-spacing: 0;
+}
+
+form{
+  text-align: center;
+}
+
+input{
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+  width: 460px;
+  background-color: rgba(0,0,0,0);
+  padding: 10px;
+  border: none;
+  border-bottom: solid 10px white;
+}
+
+input:focus {
+  outline: 0;
+  border-bottom: solid 10px white;
+}
