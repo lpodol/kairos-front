@@ -14,9 +14,11 @@
     </video>
     <div id = "container">
       <h3>What's your name?</h3>
+      <div id = "input_div">
       <!--<form action="/create" method="POST">-->
-        <input type="text" id = "name" name="name" autocomplete = "off">
+        <input type="text" id = "name" autocomplete = "off">
       <!--</form>-->
+      </div>
     <div id = "button_container">
       <button id = "button_one" class = "button" style="visibility:hidden"></button>
       <button id = "button_two" class = "button" style="visibility:hidden"></button>
@@ -24,36 +26,24 @@
     <div id = "points" style = "display:none"></div>
     </div>
   <script>
-  // var url = "http://10.11.8.233:3001/"
-  //   var xhr = new XMLHttpRequest();
-  //   xhr.open("GET", url);
-  //   xhr.addEventListener('load', function(e) {
-  //     var d = xhr.responseText;
-  //     var parsed = JSON.parse(d);
-  //   });
-  //   xhr.send();
-  //
   var first = document.getElementById("name");
-  var container = document.getElementById("container");
+  var input_div = document.getElementById("input_div");
   var h3 = document.querySelector("h3");
   var body = document.querySelector("body");
 
   first.addEventListener("keydown", function(e){
     if (e.keyCode === 13){
-      var name = document.getElementById("name");
-      var user_name = name.value;
-      h3.innerHTML = "Hello, " + user_name + ". <br> Please enter your email.";
-      container.removeChild(name);
-      name.style.visibility = "hidden";
+      var user_name = first.value;
+      input_div.removeChild(first);
+      h3.innerHTML = "Hello, " + user_name + ". Please enter your email.";
       var email = document.createElement("email");
-      container.appendChild(email);
+      input_div.appendChild(email);
       email.innerHTML = "<input type='text' id = 'email' name='email' autocomplete = 'off'>";
       email.id = "second";
-      var second = document.getElementById("second");
       second.addEventListener("keydown", function(e){
         if (e.keyCode === 13){
           var user_email = email.value;
-          container.removeChild(email);
+          input_div.removeChild(email);
           h3.innerHTML = "Some music lovers say vinyl is coming back. Do you agree?"
           var yes = document.getElementById("button_one");
           var no = document.getElementById("button_two");
@@ -73,8 +63,8 @@
               img.src="images/watch.png";
               setTimeout(function(){
                 body.removeChild(video)}, 50);
-              h3.innerHTML = "Is the Apple Watch a fashion statement or a tech device?";
-              yes.innerHTML = "Fashion";
+              h3.innerHTML = "Is the Apple Watch a status symbol or a tech device?";
+              yes.innerHTML = "Status";
               no.innerHTML = "Tech";
             }, 3500);
           }
@@ -89,13 +79,35 @@
             }, 3500);
           }
 
+          var third_click = function(){
+            points.innerText = "+15";
+            setTimeout(function(){
+              img.src = "images/polit.png";
+              yes.style = "display:none";
+              no.style = "display:none";
+            }, 3500);
+          }
+
+
           yes.addEventListener("click", function(){
             first_click();
             yes.addEventListener("click", function(){
               second_click();
+              yes.addEventListener("click", function(){
+                third_click();
+              });
+              no.addEventListener("click", function(){
+                third_click();
+              })
             })
             no.addEventListener("click", function(){
               second_click();
+              yes.addEventListener("click", function(){
+                third_click();
+              });
+              no.addEventListener("click", function(){
+                third_click();
+              })
             })
           });
 
@@ -103,9 +115,21 @@
             first_click();
             no.addEventListener("click", function(){
               second_click();
+              yes.addEventListener("click", function(){
+                third.click();
+              });
+              no.addEventListener("click", function(){
+                third.click();
+              })
             })
             yes.addEventListener("click", function(){
               second_click();
+              yes.addEventListener("click", function(){
+                third.click();
+              });
+              no.addEventListener("click", function(){
+                third.click();
+              })
             })
           });
 

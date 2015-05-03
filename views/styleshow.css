@@ -26,11 +26,13 @@ h3{
   text-align: center;
   font-size: 60px;
   letter-spacing: 0;
+  position: relative;
 }
 
 input{
+  position: relative;
   margin-top: -200px;
-  margin-left: 450px;
+  margin-left: 480px;
   text-align: center;
   font-weight: bold;
   font-size: 40px;
@@ -90,5 +92,5 @@ button:focus{
   float: right;
   margin-right: 100px;
   color: white;
-  font-size: 80px;
+  font-size: 150px;
 }
