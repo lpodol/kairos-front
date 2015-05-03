@@ -7,8 +7,22 @@ img{
   position: absolute;
   left: 0px;
   top: 0px;
-  z-index: -2;
+  z-index: -3;
+  opacity:0;
+       -webkit-animation:fadeIn ease-in 1;
+       -moz-animation:fadeIn ease-in 1;
+       -o-animation:fadeIn ease-in 1;
+       animation:fadeIn ease-in 1;
+       -webkit-animation-fill-mode:forwards;
+       -moz-animation-fill-mode:forwards;
+       -o-animation-fill-mode:forwards;
+       animation-fill-mode:forwards;
 }
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-o-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
 #dot-matrix {
   margin-left: -5px;
@@ -21,25 +35,23 @@ img{
 }
 
 h3{
-  margin-top: 260px;
+  margin-top: 200px;
   color: white;
   text-align: center;
   font-size: 60px;
   letter-spacing: 0;
 }
 
-form{
-  text-align: center;
-}
-
 input{
+  margin-top: -200px;
+  margin-left: 450px;
   text-align: center;
   font-weight: bold;
   font-size: 40px;
+  line-height: 45px;
   color: white;
   width: 460px;
   background-color: rgba(0,0,0,0);
-  padding: 10px;
   border: none;
   border-bottom: solid 10px white;
 }
@@ -48,3 +60,49 @@ input:focus {
   outline: 0;
   border-bottom: solid 10px white;
 }
+
+
+#button_container{
+  text-align: center;
+}
+
+button{
+  background-color: white;
+  opacity: 0.8;
+  height: 85px;
+  width: 130px;
+  border: 1px solid white;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: .1em;
+  margin: 0px 20px;
+}
+
+button:hover{
+  opacity: 1;
+}
+
+button:focus{
+  outline: none;
+}
+
+#bgvid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -2;
+  /*background: url('assets/images/vinyl_record.png') no-repeat;
+  background-size: cover;*/
+}
+
+#points{
+      float: right;
+      margin-right: 100px;
+      color: white;
+      font-size: 80px;
+    }
