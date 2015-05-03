@@ -8,21 +8,7 @@ img{
   left: 0px;
   top: 0px;
   z-index: -3;
-  opacity:0;
-       -webkit-animation:fadeIn ease-in 1;
-       -moz-animation:fadeIn ease-in 1;
-       -o-animation:fadeIn ease-in 1;
-       animation:fadeIn ease-in 1;
-       -webkit-animation-fill-mode:forwards;
-       -moz-animation-fill-mode:forwards;
-       -o-animation-fill-mode:forwards;
-       animation-fill-mode:forwards;
 }
-
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-o-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
 #dot-matrix {
   margin-left: -5px;
@@ -87,7 +73,7 @@ button:focus{
   outline: none;
 }
 
-#bgvid {
+#bgvid{
   position: fixed;
   right: 0;
   bottom: 0;
@@ -101,8 +87,8 @@ button:focus{
 }
 
 #points{
-      float: right;
-      margin-right: 100px;
-      color: white;
-      font-size: 80px;
-    }
+  float: right;
+  margin-right: 100px;
+  color: white;
+  font-size: 80px;
+}

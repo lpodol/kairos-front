@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="dot-matrix"></div>
-    <img id = "img" src = "sky.png">
+    <img id = "img" src = "images/sky.png">
     <video autoplay loop poster='assets/images/vinyl_record.png' id='bgvid'>
     </video>
     <div id = "container">
@@ -48,7 +48,7 @@
       var email = document.createElement("email");
       container.appendChild(email);
       email.innerHTML = "<input type='text' id = 'email' name='email' autocomplete = 'off'>";
-      email.id = "second"
+      email.id = "second";
       var second = document.getElementById("second");
       second.addEventListener("keydown", function(e){
         if (e.keyCode === 13){
@@ -62,7 +62,7 @@
           yes.innerText = "Yes";
           no.innerText = "No";
           var video = document.getElementById("bgvid");
-          video.src = "dj-vinyl.mp4";
+          video.src = "images/dj-vinyl.mp4";
           video.type = "video/mp4";
           video.defaultMuted = "true";
 
@@ -70,23 +70,23 @@
             var points = document.getElementById("points");
             points.innerText = "+5"
             setTimeout(function(){
-              img.src="watch.png";
+              img.src="images/watch.png";
               setTimeout(function(){
                 body.removeChild(video)}, 50);
               h3.innerHTML = "Is the Apple Watch a fashion statement or a tech device?";
               yes.innerHTML = "Fashion";
               no.innerHTML = "Tech";
-            }, 3000);
+            }, 3500);
           }
 
           var second_click = function(){
             points.innerText = "+10";
             setTimeout(function(){
-              img.src = "polit.png";
+              img.src = "images/polit.png";
               h3.innerText = "TheRepublican Primary is underway. Will you be voting in a Republican Primary?";
               yes.innerHTML = "Yes";
               no.innerHTML = "No";
-            }, 3000);
+            }, 3500);
           }
 
           yes.addEventListener("click", function(){
